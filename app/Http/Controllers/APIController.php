@@ -8,6 +8,6 @@ class APIController extends Controller
 {
     function getData()
     {
-
+        return ['name' => 'vinayak', 'email' => 'vinayaksutar.work@gmail.com', 'city' => 'kolhapur'];
     }
 }
