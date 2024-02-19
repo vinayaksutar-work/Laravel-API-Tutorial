@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class APIController extends Controller
 {
-    //
+    function getData()
+    {
+
+    }
 }
