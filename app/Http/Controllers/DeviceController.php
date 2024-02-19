@@ -28,4 +28,17 @@ class DeviceController extends Controller
             return ["Result"=>"Some problem is there"];
         }
     }
+    function update(Request $request)
+    {
+        $device = Device::find($request->id);
+        $device->name = $request->name;
+        $device->email = $request->email;
+        $result = $device->save();
+        if($result)
+        return ["Result"=>"Data updated successfully"];
+    }
+    function search($name)
+    {
+        return Device::where('name','like','%'. $name . '%')->get();
+    }
 }

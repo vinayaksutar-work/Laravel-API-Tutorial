@@ -24,4 +24,6 @@ Route::get('getdata',[APIController::class,'getData']);
 Route::get('devicelist',[DeviceController::class,'deviceList']);
 Route::get('devicelist/{id?}',[DeviceController::class,'getId']);
 Route::post('add',[DeviceController::class,'add']);
+Route::put('update',[DeviceController::class,'update']);
+Route::get('search/{name}',[DeviceController::class,'search']);
 
