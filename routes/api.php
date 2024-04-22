@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\APIController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\FileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,6 @@ Route::delete('delete/{id}',[DeviceController::class,'delete']);
 Route::post('save',[DeviceController::class,'testData']);
 
 Route::get('member',[MemberController::class,'index']);
+
+Route::post('upload',[FileController::class,'upload']);
 
